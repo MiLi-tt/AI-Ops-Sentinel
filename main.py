@@ -31,8 +31,7 @@ def main():
     
     if level in ["高危", "中危"]:
         print("3. 触发告警条件，发送钉钉通知...")
-        WEBHOOK_URL = os.getenv("DINGTALK_WEBHOOK") 
-        send_dingtalk_alert(ai_result, WEBHOOK_URL)
+        send_dingtalk_alert(ai_result)
     else:
         print("3. 威胁等级较低，本次不发送告警。")
 
