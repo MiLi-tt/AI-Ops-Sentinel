@@ -21,7 +21,6 @@ def get_failed_logins(log_file="/var/log/secure", minutes=5):
             lines = f.readlines()[-1000:]
             
             for line in lines:
-                # 简单的时间过滤（这里用字符串截取匹配，真实生产建议用正则解析时间）
                 # 假设日志开头格式为 "Oct 26 10:15:00"
                 try:
                     log_time_str = line[:15]
