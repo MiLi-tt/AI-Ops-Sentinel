@@ -63,7 +63,7 @@
 
 ### 3. Grafana AIOps 综合监控大屏 (V2.0 新增)
 <img width="1910" height="1035" alt="面板截图" src="https://github.com/user-attachments/assets/cb03ebc9-0f4e-4916-a568-732f2a5a8041" />
-<p align="center"><i>👆 Grafana 大屏：实时监控指标，并在右侧无缝嵌入 AI 交叉研判报告</i></p>
+<p align="center"><i>👆 Grafana 大屏：实时监控指标，并嵌入 AI 交叉研判报告</i></p>
 
 ## 🗺️ 踩坑与演进记录 (Roadmap)
 - [x] **V1.0**：实现日志提取、AI 分析与钉钉告警闭环。
