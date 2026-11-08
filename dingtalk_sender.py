@@ -44,8 +44,6 @@ def send_dingtalk_alert(ai_result, webhook_url=None):
     try:
         response = requests.post(webhook_url, headers=headers, data=json.dumps(data), timeout=10)
         response.raise_for_status()
-        
-        # 【这里是我帮你改好的：解析真实返回结果，不忽悠人】
         res_json = response.json()
         if res_json.get("errcode") == 0:
             print("✅ 钉钉告警发送成功！请查看手机。")
