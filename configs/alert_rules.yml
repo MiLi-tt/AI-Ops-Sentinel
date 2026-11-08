@@ -1,0 +1,11 @@
+groups:
+  - name: host_stats
+    rules:
+      - alert: HighCpuUsage
+        expr: 100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[1m])) * 100) > 80
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "主机 CPU 使用率过高 (实例 {{ $labels.instance }})"
+          description: "CPU 使用率已经超过 80%，当前值为 {{ $value }}%"
